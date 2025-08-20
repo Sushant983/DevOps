@@ -1,0 +1,15 @@
+// file_io.c
+#include <stdio.h>
+int main() {
+    FILE *f = fopen("example.txt","w");
+    fprintf(f, "Hello, File Handling in C!\n");
+    fclose(f);
+
+    f = fopen("example.txt","r");
+    char ch;
+    while((ch=fgetc(f))!=EOF) {
+        putchar(ch);
+    }
+    fclose(f);
+    return 0;
+}
